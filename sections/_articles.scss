@@ -3,273 +3,172 @@
 
 main {
   width: 100%;
-  // float: left;
-  /* padding: 20px; */
 }
 
-// ARTICLES
+.article-container {
+  margin-bottom: 5px;
+  overflow: hidden;
+}
 
 .article-wrapper {
-  // width: 100%;
-  // float: left;
-  /* padding: 10px;  */
-  // padding-right: 20px;
-  // height: 100%;
-  padding-bottom: 20px;
-  /* padding: 20px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  box-sizing: border-box; */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .article {
-  /* box-sizing: border-box;
-  padding: 10px; */
-
   padding: 10px;
-
-  // padding-top: 100px;  /* osigurava prostor za description ako bude gore */
-  //   padding-bottom: 200px; /* osigurava prostor za image ako bude dole */
-  // border: 1px solid #ccc;
-  // background-color: #f9f9f9;
   background-color: variables.$section-bg;
-  // box-sizing: border-box;
   position: relative;
-  // height: 100%;
 }
 
-.article__content {
-  /* width: 100%;
-  /* position: relative; */
-  // height: 100%;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-// linkovi u hederu se priblizavaju logou pri shrink
-
-.article__text {
-  /* font-size: 1rem;
-  color: #333;
-  margin: 10px; */
-  // float: right;
-  float: left;
-  // clear: both;
-  width: 55%;
-  padding-right: 20px;
-}
-
-.article--reverse .article__text {
+.article--horizontal-reverse .article__text {
   float: right;
   padding-left: 20px;
 }
 
-.article__title {
-  font-size: 1.2rem;
-  color: #f6a04a;
-  font-weight: bold;
-  text-align: center;
-  padding-bottom: 20px;
-  /* margin: 0; */
+.article.article--horizontal-reverse .article__read-more {
+  left: 10px;
 }
 
-// reverse/reversed ...
-
-.article__subtitle {
-  font-size: 1rem;
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  /* margin: 10px; */
-}
-
-.article__description {
-  font-size: 0.9rem;
-  font-weight: normal;
-  color: #666;
-  // order: 0;
-}
-
-.article__image-container {
-  /* justify-self: center; */
-  /* width: 100%; */
-  /* height: auto; */
-  float: left;
-  /* height: 80%; */
-  // height: 80%;
-  // height: 0;
-  overflow: hidden;
-  // clear: both;
-  padding-top: 30%;
-  position: relative;
-  width: 45%;
-  /* margin-bottom: 10px; */
-  height: 0;
-  overflow: hidden;
-  // padding-top: 591.44px / 1127.34px * 100%;
-  background: white;
-  // position: relative;
-}
-
-/* Normalan raspored (default, bez modifikatora) */
-// .article__image-container,
-// .article__description {
-//     // position: static; /* podrazumevano ponašanje */
-// }
-.article--reversed {
-  // padding-top: 100px;  /* osigurava prostor za description ako bude gore */
-  padding-bottom: 200px; /* osigurava prostor za image ako bude dole */
-  // overflow: ;
+.article--vertical-reverse {
+  padding-bottom: 250px;
   min-height: 300px;
 }
 
-// /* Ako ima modifier --reversed, obrni ih pozicijom */
-.article--reversed .article__description {
+.article--vertical-reverse .article__description {
   position: absolute;
   top: 30px;
-  // bottom: 20px;
-  padding: 10px 15px;
+  padding: 10px 15px 20px 15px;
   left: 0;
-  display: block;
-  // width: 100%;
-  // width: 90%;
 }
 
-.article--reversed .article__image-container {
+.article--vertical-reverse .article__image-container {
   position: absolute;
-  // bottom: 0;
   bottom: 10px;
-  // top: 150px;
   left: 10px;
-  // width: 100%;
-  width: 90%;
+  width: 96%;
   margin-top: 10px;
 }
 
-// order, inline-block, link readmore under i footer
+.article__content {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.article__text {
+  float: left;
+  width: 55%;
+  padding-right: 20px;
+}
+
+.article__title {
+  font-size: variables.$article-title-font-size;
+  color: variables.$article-title-color;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.article__subtitle {
+  font-size: variables.$article-subtitle-font-size;
+  color: #333;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.article__description {
+  font-size: variables.$article-description-font-size;
+  font-weight: normal;
+  color: #666;
+  padding-top: 10px;
+}
+
+.article__image-container {
+  overflow: hidden;
+  padding-bottom: 40%;
+  position: relative;
+  width: 45%;
+  overflow: hidden;
+}
 
 .article__image-container--wide {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 30%;
 }
 
-// slike resi
-
-// da li ovde treba absolute?
 .article__image {
-  /* justify-self: center; */
-  // width: 100%;
-  // height: 80%;
-  object-fit: cover;
-  object-position: left;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-
-  width: 120%;
+  width: 100%;
   height: 100%;
-  /* margin-bottom: 10px; */
+  object-fit: cover;
 }
 
-// readmore samo dole u "footeru"
+.article__image-container--wide .article__image {
+  object-position: center 60%;
+}
 
 .article__read-more {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  font-size: 14px;
-  color: #007BFF;
+  font-size: variables.$article-read-more-font-size;
+  color: variables.$article-read-more-color;
   text-decoration: underline;
 }
-
-.article.article--reverse .article__read-more {
-  left: 10px;
-}
-
 
 @include mixins.respond-md {
   main {
     width: 64%;
     float: left;
-    /* padding: 20px; */
   }
 
-  // .article-content::after {
-  //   content: "";
-  //   display: table;
-  //   clear: both;
-  // }
-
   .article-wrapper {
-    width: 50%;
+    width: variables.$article-width-half;
     float: left;
-    /* padding: 10px;  */
     padding-right: 20px;
-    // height: 100%;
-    // padding-bottom: 20px;
-    /* padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    box-sizing: border-box; */
   }
 
   .article-wrapper--third {
-    width: 33.33%;
+    width: variables.$article-width-third;
   }
 
-  .article__text {
-    /* font-size: 1rem;
-    color: #333;
-    margin: 10px; */
-    float: left;
-    // width: 55%;
-    // padding-right: 20px;
-  }
-
-  // ovo verovatno nije ok:
-  .article--reverse .article__text {
+  .article--horizontal-reverse .article__text {
     float: left;
     padding-left: 0;
   }
 
-  .article.article--reverse .article__read-more {
+  .article.article--horizontal-reverse .article__read-more {
     left: initial;
     right: 10px;
   }
 
-  .article--reversed {
-    // padding-top: 100px;  /* osigurava prostor za description ako bude gore */
-    padding-bottom: 0; /* osigurava prostor za image ako bude dole */
+  .article--vertical-reverse {
+    padding-bottom: 0;
     min-height: auto;
-    // overflow: ;
-    // min-height: 300px;
   }
 
-  // /* Ako ima modifier --reversed, obrni ih pozicijom */
-  .article--reversed .article__description {
+  .article__description {
+    padding-top: 10px;
+  }
+
+  .article--vertical-reverse .article__description {
     position: relative;
     top: 0;
-    // bottom: 20px;
-    // padding: 10px 15px;
     padding: 0;
-    // left: 0;
-    // display: block;
     width: 100%;
-    // height: 100%;
-    // width: 90%;
   }
 
-  .article--reversed .article__image-container {
+  .article--vertical-reverse .article__image-container {
     position: relative;
-    // bottom: 0;
-    // bottom: 10px;
-    // // top: 150px;
-    // left: 10px;
-    // width: 100%;
-    // width: 90%;
-    margin-top: 0;
+  }
+
+  .article__image-container--wide {
+    padding-bottom: 50%;
+  }
+
+  .article__text {
+    float: left;
   }
 }

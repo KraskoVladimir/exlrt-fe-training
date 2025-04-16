@@ -1,19 +1,14 @@
 @use '../mixins';
 
-// treba centrirano
 .footer {
-  // padding-left: 100px;
   background-color: #303030;
   padding-top: 40px;
   padding-bottom: 20px;
-  // margin: 0 auto;
 }
 
 .footer__container {
-  // mozda width ne treba
   width: 70%;
   margin-left: 15%;
-  // smanji razmak do 2022
   margin-bottom: 0;
 }
 
@@ -33,7 +28,6 @@
 
 .footer__style {
   text-decoration: none;
-  // color: white;
   margin-bottom: 20px;
   display: block;
 }
@@ -46,33 +40,27 @@
   list-style: none;
 }
 
-// svugde space nakon klase
-// smanji margin top vrv
 .copyright {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 30px;
   color: white;
 }
-  // clearfix negde?
-// svugde razmak posle klase?
 
 @include mixins.respond-md {
   .footer {
-    //     // padding-left: 100px;
-    //     background-color: #303030;
     padding-top: 60px;
-    //     padding-bottom: 20px;
-    //     // margin: 0 auto;
   }
 
   .footer__part {
     float: left;
     width: 25%;
-    // box-sizing: border-box;
   }
 
-  // da li su ti ispravni px granica?
   .footer__part:nth-child(n+3) {
     display: block;
+  }
+
+  .copyright {
+    margin-top: 50px;
   }
 }
