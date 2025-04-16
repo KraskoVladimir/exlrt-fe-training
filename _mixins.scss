@@ -1,0 +1,13 @@
+@mixin link-hover-style($color: #000000) {
+    color: $color;
+
+    &:hover {
+        color: #38eb0b;
+    }
+}
+
+@mixin respond-md {
+    @media (min-width: 768px) {
+      @content;
+    }
+}

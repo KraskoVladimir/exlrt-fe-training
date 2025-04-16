@@ -1,0 +1,114 @@
+@use '../mixins';
+@use '../variables';
+
+.nav-container {
+  display: none;
+}
+
+@include mixins.respond-md {
+  .nav-container {
+    display: block;
+    width: 18%;
+    float: left;
+    padding: 10px 10px 5px 10px;
+    margin-right: 40px;
+    // vertical-align: top;
+    border-radius: 15px;
+    margin-left: 20px;
+    background-color: variables.$nav-bg;
+  }
+
+  .nav-container__list {
+    list-style-type: none;
+    /* padding-top: 20px; */
+    // width: 100%;
+    /* margin: 0; */
+    // justify-self: center;
+  }
+
+  .nav__item {
+    /* padding: 10px; */
+    padding: 0px 15px;
+    margin-bottom: 10px;
+    // u priomenljivu
+    background-color: #959595;
+    // border-bottom: 1px solid #ccc;
+    // clear: both;
+    border-radius: 15px;
+    // position: relative;
+  }
+
+  // open modifier
+  .nav__item--open {
+  // .nav__item.open {
+    background-color: #fc8100;
+    padding: 0;
+  }
+
+  .nav__item-text {
+    width: 85%;
+    color: white;
+    float: left;
+    padding-top: 7px;
+    // vertical-align: middle;
+  }
+
+  .nav__item--open .nav__item-text {
+    padding-left: 15px;
+    width: 82%;
+  }
+
+  .nav__item--open .nav__item-toggle {
+    width: 18%;
+  }
+
+  // jos promenljivih
+  .nav__item-toggle {
+    // float koristi:
+    width: 15%;
+    // text-align: right;
+    color: white;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+
+  .nav__item-submenu {
+    list-style-type: none;
+    // padding: 0;
+    // margin: 0;
+    // width: 100%;
+    // top: 100%;
+    // left: 0;
+    // border-top: none;
+    // border-bottom-left-radius: 15px;
+    // border-bottom-right-radius: 15px;
+    // border-bottom: 1px solid #ccc;
+    // box-sizing: border-box;
+  }
+
+  /* main part */
+  // bem i ispod!
+  .nav__submenu-item {
+    padding: 0px 5px;
+    background-color: white;
+    margin: 0;
+  }
+
+  .nav__submenu-item:first-of-type {
+    padding-top: 5px;
+  }
+
+  .nav__submenu-item:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 5px;
+  }
+
+  .nav__submenu-link {
+    display: block;
+    color: black;
+    text-decoration: underline;
+    padding: 3px 10px;
+  }
+
+}
