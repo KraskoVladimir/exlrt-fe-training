@@ -1,0 +1,60 @@
+.navbar-nav .border-end {
+  border-right: 2px solid black !important;
+}
+
+.accordion {
+  background-color: #e1e1e1;
+  padding: 5px 0;
+}
+
+.accordion-item {
+  --bs-accordion-btn-bg: #959595;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+}
+
+.accordion-button {
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fc8100;
+  color: white;
+}
+
+.accordion-button::after {
+  content: '+';
+  font-size: 20px;
+  font-weight: bold;
+  transform: none;
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: '−';
+  background-image: none;
+  transform: none;
+}
+
+.accordion-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: black;
+}
+
+.article {
+  background-color: #e1e1e1;
+  padding: 10px;
+}
+
+.article-title {
+  color: #f6a04a;
+  /* font-size: 1.2rem; */
+  font-size: 19px;
+}
+
+.read-more {
+  color: #007BFF;
+}
