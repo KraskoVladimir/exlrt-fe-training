@@ -34,7 +34,7 @@
   }
 
   .nav__item-text {
-    width: 85%;
+    // width: 85%;
     color: white;
     float: left;
     padding-top: 7px;
@@ -50,7 +50,8 @@
   }
 
   .nav__item-toggle {
-    width: 15%;
+    // width: 15%;
+    float: right;
     color: white;
     font-size: 30px;
     font-weight: lighter;

@@ -18,6 +18,12 @@
   clear: both;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .footer__part:nth-child(n+3) {
   display: none;
 }
