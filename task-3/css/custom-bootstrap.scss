@@ -1,18 +1,18 @@
-@use 'variables';
+@use 'variables' as *;
 
 .navbar {
   padding: 0;
-  background-color: variables.$secondary-color;
+  background-color: $secondary-color;
 }
 
 .container-fluid {
   padding: 0;
-  background-color: variables.$primary-color;
+  background-color: $primary-color;
 }
 
 .logo-menu {
   padding: 8px;
-  background-color: variables.$secondary-color;
+  background-color: $secondary-color
 }
 
 .w-responsive {
@@ -22,7 +22,7 @@
 #navbarNav {
   margin-right: 40px;
   padding: 15px;
-  background-color: variables.$tetriary-color;
+  background-color: $tetriary-color;
 }
 
 .header-form {
@@ -34,12 +34,12 @@
 }
 
 .article {
-  background-color: variables.$secondary-color;
+  background-color: $secondary-color;
   padding: 10px;
 }
 
 .article-title {
-  color: variables.$article-title-color;
+  color: $article-title-color;
   font-size: larger;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .read-more {
-  color: variables.$article-read-more-color;
+  color: $article-read-more-color;
 }
 
 @media (min-width: 768px) {
@@ -75,6 +75,7 @@
   }
 
   .navbar-nav {
+    // ovo ne
     --bs-nav-link-padding-x: auto;
   }
 
@@ -102,11 +103,11 @@
   #navbarNav {
     margin-right: 0;
     padding: 0;
-    background-color: variables.$secondary-color;
+    background-color: $secondary-color;
   }
 
   .accordion {
-    background-color: variables.$tetriary-color;
+    background-color: $tetriary-color;
     padding: 5px 0;
     border-radius: 15px;
   }
@@ -123,14 +124,14 @@
   }
 
   .accordion-button {
-    color: variables.$primary-color;;
+    color: $primary-color;;
     height: 100%;
     font-size: 15px;
   }
 
   .accordion-button:not(.collapsed) {
-    background-color: variables.$open-accordion-btn-color;
-    color: variables.$primary-color;;
+    background-color: $open-accordion-btn-color;
+    color: $primary-color;;
   }
 
   .accordion-button::after {
@@ -160,6 +161,6 @@
 
   .footer-container {
     // ovo pogledaj, bez max width
-    max-width: 1100px;
+    // max-width: 1100px;
   }
 }
