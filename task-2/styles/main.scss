@@ -1,7 +1,7 @@
-@use 'sections/header';
-@use 'sections/nav';
-@use 'sections/articles';
-@use 'sections/footer';
+@use 'components/header';
+@use 'components/nav';
+@use 'components/articles';
+@use 'components/footer';
 
 * {
     margin: 0;
@@ -22,4 +22,10 @@
   width: 100%;
   padding: 20px;
   overflow: hidden;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }

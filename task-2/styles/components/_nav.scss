@@ -1,5 +1,5 @@
-@use '../mixins';
-@use '../variables';
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 .nav-container {
   display: none;
@@ -29,15 +29,15 @@
   }
 
   .nav__item--open {
-    background-color: #fc8100;
+    // background-color: #fc8100;
     padding: 0;
   }
 
   .nav__item-text {
-    // width: 85%;
     color: white;
     float: left;
     padding-top: 7px;
+    // display: inline-block;
   }
 
   .nav__item--open .nav__item-text {
@@ -49,16 +49,28 @@
     width: 18%;
   }
 
+  .nav__item--open .nav__item-submenu {
+    display: block;
+  }
+
+  .nav__item-header {
+    background-color: #fc8100;
+    // display: block;
+    // padding: 10px;
+    // padding: 0.5rem 1rem;
+  }
+
   .nav__item-toggle {
-    // width: 15%;
     float: right;
     color: white;
     font-size: 30px;
     font-weight: lighter;
+    // display: inline-block;
   }
 
   .nav__item-submenu {
     list-style-type: none;
+    display: none;
   }
 
   .nav__submenu-item {

@@ -1,5 +1,5 @@
-@use '../variables';
-@use '../mixins';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .header {
   background-color: white;
@@ -121,10 +121,15 @@
     padding-right: 0;
   }
 
+  // 50'
+  // probaj duzi text u footer, 2 tipa greske
+  // padding i u header?
+
   .header__nav {
     float: left;
-    width: 60%;
-    justify-items: end;
+    width: 80%;
+    // margin: 0 auto;
+    justify-items: center;
   }
 
   .header__nav-list {

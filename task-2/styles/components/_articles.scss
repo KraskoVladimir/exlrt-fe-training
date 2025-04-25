@@ -1,5 +1,5 @@
-@use '../mixins';
-@use '../variables';
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 main {
   width: 100%;
@@ -46,6 +46,7 @@ main {
   position: absolute;
   bottom: 10px;
   left: 10px;
+  // menjaj 96%
   width: 96%;
   margin-top: 10px;
 }
