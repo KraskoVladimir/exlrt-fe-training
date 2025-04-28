@@ -5,7 +5,7 @@
   background-color: white;
   padding-bottom: 10px;
 
-  &__container-logo-menu {
+  .logo-menu {
     padding-bottom: 10px;
     background-color: variables.$section-bg;
     padding-top: 10px;
@@ -19,31 +19,31 @@
   }
 }
 
-.header__menu-button {
+.menu-button {
   float: left;
   padding-left: 20px;
   margin-top: 10px;
 }
 
-.header__menu-button-image {
+.menu-button__image {
   height: 30px;
   width: 40px;
 }
 
-.header__logo {
+.logo {
   text-align: right;
   padding-right: 20px;
 }
 
-.header__logo-image {
+.logo__image {
   vertical-align: middle;
   width:230px;
   height:50px;
 }
 
-.header__logo,
+.logo,
 .header__nav,
-.header__search {
+.search {
   font-size: 16px;
 }
 
@@ -58,7 +58,7 @@
   @include mixins.link-hover-style();
 }
 
-.header__search {
+.search {
   position: relative;
   vertical-align: middle;
   text-align: center;
@@ -67,7 +67,7 @@
   width: 90%;
 }
 
-.header__search-input {
+.search__input {
   height: 36px;
   padding: 0 35px 0 10px;
   font-size: 14px;
@@ -78,11 +78,11 @@
   height: 80%;
 }
 
-.header__search-icon {
+.search__icon {
   position: absolute;
-  right: 20px;
-  top: 40%;
-  transform: translateY(-50%);
+  right: 10px;
+  top: 30%;
+  // transform: translateY(-50%);
   height: 18px;
   pointer-events: none;
 }
@@ -99,38 +99,43 @@
         line-height: 100px;
     }
 
-    &__container-logo-menu {
-        padding-bottom: 0;
-        background-color: inherit;
-        padding-top: 0;
+    .logo-menu {
+      padding-bottom: 0;
+      background-color: inherit;
+      padding-top: 0;
     }
 
     &__nav-search {
-        background-color: variables.$section-bg;
-        width: auto;
-        padding-bottom: 0;
+      background-color: variables.$section-bg;
+      width: auto;
+      padding-bottom: 0;
+      position: relative;
     }
   }
 
-  .header__menu-button {
+  .menu-button {
     display: none;
   }
 
-  .header__logo {
+  .logo {
     float: left;
     padding-right: 0;
   }
 
-  // 50'
   // probaj duzi text u footer, 2 tipa greske
   // padding i u header?
 
   .header__nav {
-    float: left;
     width: 80%;
     // margin: 0 auto;
     justify-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
+
+  // poravnaj logo i search po vertikali
+  // levi side nav zavrsi, narandzasto samo wrapper
 
   .header__nav-list {
     margin: 0;
@@ -156,12 +161,8 @@
     }
   }
 
-  .header__search {
+  .search {
     float: right;
     width: 20%;
-  }
-
-  .header__search-icon {
-    top: 75%;
   }
 }

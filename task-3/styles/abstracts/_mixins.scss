@@ -1,0 +1,6 @@
+@mixin equal-height-columns($selector: '.article') {
+    #{$selector} {
+        height: 100%;
+        background-color: greenyellow;
+    }
+}

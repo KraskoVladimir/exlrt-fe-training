@@ -9,30 +9,29 @@
 <body>
     <header class="header">
         <!-- clear fix ovde negde zbog float? -->
-        <div class="header__container">
-            <div class="header__container-logo-menu">
-                <div class="header__menu-button">
-                  <img class="header__menu-button-image" src="../../assets/images/icon-burger.png"  alt="logo">
-                </div>
-                <div class="header__logo">
-                  <img class="header__logo-image" src="../../assets/images/logo.png" alt="logo">
-                </div>
+        <div class="logo-menu">
+            <div class="menu-button">
+                <img class="menu-button__image" src="../../assets/images/icon-burger.png"  alt="logo">
             </div>
-            <div class="header__nav-search">
-                <nav class="header__nav">
-                  <ul class="header__nav-list">
+            <div class="logo">
+                <img class="logo__image" src="../../assets/images/logo.png" alt="logo">
+            </div>
+        </div>
+        <div class="header__nav-search">
+            <!-- * za use -->
+            <nav class="header__nav">
+                <ul class="header__nav-list">
                     <li class="header__link-container"><a class="header__link" href="#">Platforms & Services</a></li>
                     <li class="header__link-container"><a class="header__link" href="#">About Us</a></li>
                     <li class="header__link-container"><a class="header__link" href="#">Careers</a></li>
                     <li class="header__link-container"><a class="header__link" href="#">Clients</a></li>
                     <li class="header__link-container"><a class="header__link" href="#">Blog</a></li>
                     <li class="header__link-container"><a class="header__link" href="#">Contact</a></li>
-                  </ul>
-                </nav>
-                <div class="header__search">
-                  <input class="header__search-input" type="text" placeholder="Search" />
-                  <img class="header__search-icon" src="../../assets/images/icon-search.png" alt="Search" />
-                </div>
+                </ul>
+            </nav>
+            <div class="search">
+                <input class="search__input" type="text" placeholder="Search" />
+                <img class="search__icon" src="../../assets/images/icon-search.png" alt="Search" />
             </div>
         </div>
     </header>
@@ -43,18 +42,22 @@
             <nav>
                 <ul class="nav-container__list">
                     <li class="nav__item clearfix">
-                        <span class="nav__item-text">Kentico</span>
-                        <span class="nav__item-toggle">+</span>
-                        <!-- <ul class="nav__item-submenu">
+                        <div class="nav__item-header">
+                            <span class="nav__item-text">Kentico</span>
+                            <span class="nav__item-toggle">+</span>
+                        </div>
+                        <ul class="nav__item-submenu">
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">RWS Tridion Sites</a></li>
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Rws Tridion Docs</a></li>
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">RWS Language Cloud</a></li>
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">RWS Trados Studio</a></li>
-                        </ul> -->
+                        </ul>
                     </li>
                     <li class="nav__item clearfix">
-                        <span class="nav__item-text">Sitecore</span>
-                        <span class="nav__item-toggle">+</span>
+                        <div class="nav__item-header">
+                            <span class="nav__item-text">Sitecore</span>
+                            <span class="nav__item-toggle">+</span>
+                        </div>
                         <ul class="nav__item-submenu">
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">RWS Tridion Sites</a></li>
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Rws Tridion Docs</a></li>
@@ -65,7 +68,7 @@
                     <li class="nav__item nav__item--open clearfix">
                         <div class="nav__item-header">
                             <span class="nav__item-text">Tridion</span>
-                            <span class="nav__item-toggle">-</span>
+                            <span class="nav__item-toggle">−</span>
                         </div>
                         <ul class="nav__item-submenu">
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">RWS Tridion Sites</a></li>
@@ -75,8 +78,10 @@
                         </ul>
                     </li>
                     <li class="nav__item clearfix">
-                        <span class="nav__item-text">ADAM</span>
-                        <span class="nav__item-toggle">+</span>
+                        <div class="nav__item-header">
+                            <span class="nav__item-text">ADAM</span>
+                            <span class="nav__item-toggle">+</span>
+                        </div>
                         <ul class="nav__item-submenu">
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">RWS Tridion Sites</a></li>
                             <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Rws Tridion Docs</a></li>

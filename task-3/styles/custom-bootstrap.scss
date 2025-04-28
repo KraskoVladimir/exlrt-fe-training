@@ -1,4 +1,8 @@
-@use 'variables' as *;
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+// @use "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@include equal-height-columns();
 
 .navbar {
   padding: 0;
@@ -74,13 +78,18 @@
     width: auto;
   }
 
-  .navbar-nav {
-    // ovo ne
-    --bs-nav-link-padding-x: auto;
+  .navbar-nav .nav-item.border-end {
+    position: relative;
   }
 
-  .navbar-nav .border-end {
-    border-right: 2px solid black !important;
+  .navbar-nav .nav-item.border-end::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    bottom: 25%;
+    right: 0;
+    width: 2px;
+    background-color: black;
   }
 
   .navbar {
@@ -113,10 +122,13 @@
   }
 
   .accordion-item {
-    --bs-accordion-btn-bg: #959595;
     border-radius: 8px;
     overflow: hidden;
     margin: 16px;
+  }
+
+  .accordion-button {
+    background-color: #959595;
   }
 
   .accordion-header {

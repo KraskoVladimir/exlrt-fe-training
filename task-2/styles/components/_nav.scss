@@ -36,17 +36,23 @@
   .nav__item-text {
     color: white;
     float: left;
-    padding-top: 7px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    // padding-top: 7px;
     // display: inline-block;
   }
 
   .nav__item--open .nav__item-text {
-    padding-left: 15px;
-    width: 82%;
+    // padding-left: 15px;
+    // width: 82%;
+    // float: left;
   }
 
   .nav__item--open .nav__item-toggle {
-    width: 18%;
+    // width: 18%;
+    // float: right;
   }
 
   .nav__item--open .nav__item-submenu {
@@ -54,10 +60,17 @@
   }
 
   .nav__item-header {
-    background-color: #fc8100;
+    overflow: hidden;
+    position: relative;
     // display: block;
     // padding: 10px;
     // padding: 0.5rem 1rem;
+  }
+  
+  .nav__item--open .nav__item-header {
+    background-color: #fc8100;
+    border-radius: 15px 15px 0 0;
+    padding: 0px 15px;
   }
 
   .nav__item-toggle {
