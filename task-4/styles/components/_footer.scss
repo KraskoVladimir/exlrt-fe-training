@@ -1,0 +1,41 @@
+@use '../abstracts/mixins';
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+}
+
+.footer__part:nth-child(n + 3) {
+    display: none;
+}
+
+.footer__container {
+    display: grid;
+    gap: 20px;
+}
+
+.footer__style {
+    text-decoration: none;
+}
+
+.footer__part-list {
+    list-style: none;
+}
+
+@include mixins.respond-md {
+    .footer__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer__part:nth-child(3), .footer__part:nth-child(4) {
+        display: block;
+    }
+
+    .copyright {
+        grid-column: span 4;
+        text-align: center;
+        padding: 20px 0;
+    }
+}

@@ -1,0 +1,88 @@
+@use '../abstracts/mixins';
+
+.main {
+    display: grid;
+    grid-area: main;
+}
+
+.article {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.article--vertical-reverse {
+    .article__image-container {
+        grid-row: 3;
+    }
+
+    .article__description {
+        grid-row: 2;
+    }
+}
+
+.article--horizontal-reverse .article__content {
+    grid-template-areas: "image text";
+    grid-template-columns: 45% 55%;
+}
+
+.article__read-more {
+    justify-self: end;
+}
+
+.article--horizontal-reverse .article__read-more {
+    justify-self: start;
+}
+
+.article__content {
+    display: grid;
+    grid-template-areas: "text image";
+    grid-template-columns: 55% 45%;
+}
+
+.article__text {
+    grid-area: text;
+}
+
+.article__description {
+    font-size: 20px;
+}
+
+.article__content .article__image-container {
+    grid-area: image;
+}
+
+@include mixins.respond-md {
+    .articles-row {
+        display: grid;
+        gap: 40px;
+
+        &--2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &--3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .article--horizontal-reverse .article__content {
+        grid-template-areas: "text image";
+        grid-template-columns: 55% 45%;
+    }
+
+    .article--horizontal-reverse .article__read-more {
+        justify-self: end;
+    }
+
+    .article--vertical-reverse {
+        .article__image-container {
+            grid-row: 2;
+        }
+
+        .article__description {
+            grid-row: 3;
+        }
+    }
+}

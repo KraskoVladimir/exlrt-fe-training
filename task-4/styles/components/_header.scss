@@ -1,0 +1,89 @@
+@use '../abstracts/mixins';
+
+.header {
+    grid-area: header;
+    display: grid;
+
+    grid-template:
+        "logo-burger" 30%
+        "nav-search" 70%
+        / 1fr;
+}
+
+.logo-burger {
+    display: grid;
+    padding: 10px;
+    align-items: center;
+    grid-area: logo-burger;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.burger {
+    width: 30px;
+    height: 30px;
+}
+
+.logo {
+    justify-self: end;
+    height: 40px;
+}
+
+.nav-search {
+    display: grid;
+    grid-area: nav-search;
+    grid-template-columns: 1fr;
+}
+
+.header__nav-list {
+    display: grid;
+    list-style: none;
+}
+
+.header__link-container {
+    font-size: 16px;
+}
+
+.header__link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.search__icon {
+    height: 18px;
+    pointer-events: none;
+}
+
+@include mixins.respond-md {
+    .header {
+        grid-template:
+            "logo nav search" 80px
+            / auto 1fr auto;
+    }
+
+    .logo-burger {
+        grid-area: logo;
+        justify-content: start;
+
+        .burger {
+          display: none;
+        }
+    }
+
+    .nav-search {
+        grid-area: nav;
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "nav search";
+        align-items: center;
+    }
+
+    .header__nav-list {
+        grid-auto-flow: column;
+    }
+
+    .search {
+        grid-area: search;
+    }
+}

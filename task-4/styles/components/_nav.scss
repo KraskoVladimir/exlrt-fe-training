@@ -1,0 +1,85 @@
+@use '../abstracts/mixins';
+
+.side-nav {
+  display: none;
+}
+
+@include mixins.respond-md {
+  .side-nav {
+    display: block;
+    grid-area: nav;
+    padding-left: 10px;
+  }
+
+  .nav-container__list {
+    list-style-type: none;
+  }
+
+  .nav__item {
+    padding: 0px 15px;
+    margin-bottom: 10px;
+    background-color: #959595;
+    border-radius: 15px;
+  }
+
+  .nav__item--open {
+    padding: 0;
+  }
+
+  .item-text {
+    color: white;
+  }
+
+  .nav__item--open .submenu {
+    display: block;
+  }
+
+  .item-header {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+  }
+
+  .nav__item--open .item-header {
+    background-color: #fc8100;
+    border-radius: 15px 15px 0 0;
+    padding: 0px 15px;
+  }
+
+  .item-toggle {
+    color: white;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+
+  .submenu {
+    list-style-type: none;
+    display: none;
+  }
+
+  .submenu__item {
+    padding: 0px 5px;
+    background-color: aquamarine;
+    margin: 0;
+  }
+
+  .submenu__item:first-of-type {
+    padding-top: 5px;
+  }
+
+  .submenu__item:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 5px;
+  }
+
+  .nav__submenu-link {
+    display: block;
+    color: black;
+    text-decoration: underline;
+    padding: 3px 10px;
+    font-size: 20px;
+  }
+}
